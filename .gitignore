@@ -138,6 +138,8 @@ venv.bak/
 
 # mkdocs documentation
 /site
+*.mp3
+*.mp4
 
 # mypy
 .mypy_cache/

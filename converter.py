@@ -1,6 +1,7 @@
-import subprocess
+from moviepy.editor import VideoFileClip
 
-def convert_video_to_audio(video_file_path, audio_file_path):
-    command = "ffmpeg -i {} -vn -ar 44100 -ac 2 -b:a 192k {}".format(video_file_path, audio_file_path)
-    subprocess.call(command, shell=True)
+# Load the mp4 file
+video = VideoFileClip("monsters.mp4")
 
+# Extract audio from video
+video.audio.write_audiofile(filename="monstars.mp3", bitrate="160k", verbose=False)
