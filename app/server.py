@@ -30,10 +30,6 @@ def download_file(file_name):
     return response
   return send_from_directory('audio', file_name)
 
-@app.route('/test')
-def test():
-   return render_template("test.html")
-
 if __name__ == "__main__":
   app.run(debug=True)
 
