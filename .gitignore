@@ -141,6 +141,7 @@ venv.bak/
 *.mp3
 *.mp4
 
+
 # mypy
 .mypy_cache/
 .dmypy.json
