@@ -1,6 +1,4 @@
 from pytube import YouTube
-from converter import convert_video_to_audio
-import os
 
 def get_video_from_tube(url='https://music.youtube.com/watch?v=YWEUzzHb7MU')->dict:
     # AUDIO 
@@ -12,12 +10,5 @@ def get_video_from_tube(url='https://music.youtube.com/watch?v=YWEUzzHb7MU')->di
     path = video.download(output_path="./downloads/")
     path = path.replace("\\./", "\\")
     path = path.replace("\\", "/")
-    return {title, path}
+    return {"title": title, "path": path}
 
-title, path = get_video_from_tube("https://music.youtube.com/watch?v=BmQ1vT5SFq8")
-print("Title")
-print(title)
-print("Path")
-print(path)
-convert_video_to_audio(file_path=path, title=title)
-os.remove(path)
