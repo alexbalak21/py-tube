@@ -14,6 +14,10 @@ def get_video_from_tube(url='https://music.youtube.com/watch?v=YWEUzzHb7MU')->di
     path = path.replace("\\", "/")
     return {title, path}
 
-title, path = get_video_from_tube()
+title, path = get_video_from_tube("https://music.youtube.com/watch?v=BmQ1vT5SFq8")
+print("Title")
+print(title)
+print("Path")
+print(path)
 convert_video_to_audio(file_path=path, title=title)
 os.remove(path)
